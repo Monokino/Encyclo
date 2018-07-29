@@ -35,11 +35,11 @@
       <height>631</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/img/background.jpg);</string>
+    </property>
     <property name="text">
      <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>../../../Users/Managua Leo/Desktop/Без имени-3.jpg</pixmap>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_1">
