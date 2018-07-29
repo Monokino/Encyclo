@@ -11,17 +11,16 @@ MainWindow::MainWindow(QWidget *parent) :
     secWindow = new secondWindow ();
     connect(secWindow, &secondWindow::firstWindow, this, &MainWindow::show);
 
-    ui->pushButton_1->setGeometry(135, 200, 130, 35);
-    ui->pushButton_2->setGeometry(135, 260, 130, 35);
-    ui->pushButton_3->setGeometry(135, 320, 130, 35);
-    ui->pushButton_4->setGeometry(135, 380, 130, 35);
-    ui->pushButton_5->setGeometry(135, 440, 130, 35);
 
-    ui->pushButton_1->setFixedSize(130, 35);
-    ui->pushButton_2->setFixedSize(130, 35);
-    ui->pushButton_3->setFixedSize(130, 35);
-    ui->pushButton_4->setFixedSize(130, 35);
-    ui->pushButton_5->setFixedSize(130, 35);
+    QList<QPushButton*> buttonsList;
+    buttonsList << ui->pushButton_1 << ui->pushButton_2 << ui->pushButton_3
+                << ui->pushButton_4 << ui->pushButton_5;
+
+    foreach(auto button, buttonsList)
+    {
+        button->setFixedSize(130, 35);
+        button->setFont(QFont("Bell MT", 14, QFont::Bold, false));
+    }
 }
 
 MainWindow::~MainWindow()
