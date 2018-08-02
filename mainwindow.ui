@@ -42,10 +42,10 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_1">
+   <widget class="QPushButton" name="playButton">
     <property name="geometry">
      <rect>
-      <x>135</x>
+      <x>130</x>
       <y>210</y>
       <width>130</width>
       <height>35</height>
@@ -72,7 +72,8 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0738636 rgba(139, 18, 18, 255), stop:0.488636 rgba(0, 0, 0, 255), stop:0.931818 rgba(139, 23, 23, 255));
+     <string notr="true">
+
 
 </string>
     </property>
@@ -110,13 +111,13 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true"/>
+     <string notr="true">color: rgb(205 102 0);</string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#c7c7c7;&quot;&gt;ENCYCLO&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;ENCYCLO&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="googleButton">
     <property name="geometry">
      <rect>
       <x>135</x>
@@ -152,7 +153,7 @@
      <string>Google+</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="helpButton">
     <property name="geometry">
      <rect>
       <x>135</x>
@@ -188,7 +189,7 @@
      <string>Help</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="optionButton">
     <property name="geometry">
      <rect>
       <x>135</x>
@@ -224,7 +225,7 @@
      <string>Options</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_5">
+   <widget class="QPushButton" name="exitButton">
     <property name="geometry">
      <rect>
       <x>135</x>

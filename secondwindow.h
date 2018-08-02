@@ -19,7 +19,8 @@ signals:
     void firstWindow();  // Сигнал для первого окна на открытие
 
 private slots:
-    void on_pushButton_7_clicked();
+
+    void on_menuButton_clicked();
 
 private:
     Ui::secondWindow *ui;

@@ -11,15 +11,36 @@ MainWindow::MainWindow(QWidget *parent) :
     secWindow = new secondWindow ();
     connect(secWindow, &secondWindow::firstWindow, this, &MainWindow::show);
 
+    ui->label->setFont(QFont("Bell MT", 35, QFont::Bold, false));
+
+    ui->playButton->setGeometry(130, 210, 140, 35);
+    ui->optionButton->setGeometry(130, 270, 140, 35);
+    ui->helpButton->setGeometry(130, 330, 140, 35);
+    ui->googleButton->setGeometry(130, 390, 140, 35);
+    ui->exitButton->setGeometry(130, 450, 140, 35);
+
 
     QList<QPushButton*> buttonsList;
-    buttonsList << ui->pushButton_1 << ui->pushButton_2 << ui->pushButton_3
-                << ui->pushButton_4 << ui->pushButton_5;
+    buttonsList << ui->playButton << ui->optionButton << ui->helpButton
+                << ui->googleButton << ui->exitButton;
 
     foreach(auto button, buttonsList)
     {
-        button->setFixedSize(130, 35);
-        button->setFont(QFont("Bell MT", 14, QFont::Bold, false));
+        button->setFixedSize(140, 35);
+        button->setFont(QFont("Bell MT", 16, QFont::Bold, false));
+        button->setStyleSheet("* {color: #000000;"
+                              "border: 2px solid #363636; "
+                              "border-radius: 10px;"
+                              "background-color: #FFFFFF;"
+                              ";}");
+
+
+
+        /*button->setStyleSheet("* :hover {color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0738636 rgba(139, 18, 18, 255), stop:0.488636 rgba(0, 0, 0, 255), stop:0.931818 rgba(139, 23, 23, 255));"
+                              "border: 1px solid #8B4513; "
+                              "border-radius: 10px;"
+                              "background-color: #ffffff;"
+                              "}");*/
     }
 }
 
@@ -28,13 +49,14 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_pushButton_5_clicked()
-{
-    QApplication::exit();
-}
 
-void MainWindow::on_pushButton_1_clicked()
+void MainWindow::on_playButton_clicked()
 {
     this->close();
     secWindow->show();
+}
+
+void MainWindow::on_exitButton_clicked()
+{
+    QApplication::exit();
 }
