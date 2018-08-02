@@ -7,13 +7,13 @@ secondWindow::secondWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    ui->pediaButton->setGeometry(42, 10, 140, 35);
-    ui->achievButton->setGeometry(42, 70, 140, 35);
-    ui->menuButton->setGeometry(42, 130, 140, 35);
+    ui->pediaButton->setGeometry(37, 370, 140, 35);
+    ui->achievButton->setGeometry(37, 430, 140, 35);
+    ui->menuButton->setGeometry(37, 490, 140, 35);
 
-    ui->questButton->setGeometry(229, 10, 140, 35);
-    ui->rankButton->setGeometry(229, 70, 140, 35);
-    ui->shopButton->setGeometry(229, 130, 140, 35);
+    ui->questButton->setGeometry(224, 370, 140, 35);
+    ui->rankButton->setGeometry(224, 430, 140, 35);
+    ui->shopButton->setGeometry(224, 490, 140, 35);
 
     ui->newgameButton->setGeometry(130, 300, 140, 35);
 

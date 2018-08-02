@@ -109,197 +109,221 @@
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QPushButton" name="pediaButton">
    <property name="geometry">
     <rect>
-     <x>-5</x>
-     <y>370</y>
-     <width>411</width>
-     <height>161</height>
+     <x>37</x>
+     <y>381</y>
+     <width>140</width>
+     <height>35</height>
     </rect>
    </property>
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
-     <widget class="QPushButton" name="pediaButton">
-      <property name="minimumSize">
-       <size>
-        <width>140</width>
-        <height>35</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>140</width>
-        <height>35</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <family>Bell MT</family>
-        <pointsize>14</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0738636 rgba(139, 18, 18, 255), stop:0.488636 rgba(0, 0, 0, 255), stop:0.931818 rgba(139, 23, 23, 255));</string>
-      </property>
-      <property name="text">
-       <string>Encyclopedia</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QPushButton" name="questButton">
-      <property name="minimumSize">
-       <size>
-        <width>140</width>
-        <height>35</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>140</width>
-        <height>35</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <family>Bell MT</family>
-        <pointsize>14</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0738636 rgba(139, 18, 18, 255), stop:0.488636 rgba(0, 0, 0, 255), stop:0.931818 rgba(139, 23, 23, 255));</string>
-      </property>
-      <property name="text">
-       <string>Quests</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QPushButton" name="achievButton">
-      <property name="minimumSize">
-       <size>
-        <width>140</width>
-        <height>35</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>130</width>
-        <height>35</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <family>Bell MT</family>
-        <pointsize>14</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0738636 rgba(139, 18, 18, 255), stop:0.488636 rgba(0, 0, 0, 255), stop:0.931818 rgba(139, 23, 23, 255));</string>
-      </property>
-      <property name="text">
-       <string>Achievements</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="1">
-     <widget class="QPushButton" name="rankButton">
-      <property name="minimumSize">
-       <size>
-        <width>140</width>
-        <height>35</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>130</width>
-        <height>35</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <family>Bell MT</family>
-        <pointsize>14</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0738636 rgba(139, 18, 18, 255), stop:0.488636 rgba(0, 0, 0, 255), stop:0.931818 rgba(139, 23, 23, 255));</string>
-      </property>
-      <property name="text">
-       <string>Rankings</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="0">
-     <widget class="QPushButton" name="menuButton">
-      <property name="minimumSize">
-       <size>
-        <width>140</width>
-        <height>35</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>130</width>
-        <height>35</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <family>Bell MT</family>
-        <pointsize>14</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0738636 rgba(139, 18, 18, 255), stop:0.488636 rgba(0, 0, 0, 255), stop:0.931818 rgba(139, 23, 23, 255));</string>
-      </property>
-      <property name="text">
-       <string>Menu</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="1">
-     <widget class="QPushButton" name="shopButton">
-      <property name="minimumSize">
-       <size>
-        <width>140</width>
-        <height>35</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>130</width>
-        <height>35</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <family>Bell MT</family>
-        <pointsize>14</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0738636 rgba(139, 18, 18, 255), stop:0.488636 rgba(0, 0, 0, 255), stop:0.931818 rgba(139, 23, 23, 255));</string>
-      </property>
-      <property name="text">
-       <string>Shop</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
+   <property name="minimumSize">
+    <size>
+     <width>140</width>
+     <height>35</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>140</width>
+     <height>35</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bell MT</family>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0738636 rgba(139, 18, 18, 255), stop:0.488636 rgba(0, 0, 0, 255), stop:0.931818 rgba(139, 23, 23, 255));</string>
+   </property>
+   <property name="text">
+    <string>Encyclopedia</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="questButton">
+   <property name="geometry">
+    <rect>
+     <x>224</x>
+     <y>381</y>
+     <width>140</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>140</width>
+     <height>35</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>140</width>
+     <height>35</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bell MT</family>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0738636 rgba(139, 18, 18, 255), stop:0.488636 rgba(0, 0, 0, 255), stop:0.931818 rgba(139, 23, 23, 255));</string>
+   </property>
+   <property name="text">
+    <string>Quests</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="achievButton">
+   <property name="geometry">
+    <rect>
+     <x>37</x>
+     <y>432</y>
+     <width>140</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>140</width>
+     <height>35</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>130</width>
+     <height>35</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bell MT</family>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0738636 rgba(139, 18, 18, 255), stop:0.488636 rgba(0, 0, 0, 255), stop:0.931818 rgba(139, 23, 23, 255));</string>
+   </property>
+   <property name="text">
+    <string>Achievements</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="rankButton">
+   <property name="geometry">
+    <rect>
+     <x>224</x>
+     <y>432</y>
+     <width>140</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>140</width>
+     <height>35</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>130</width>
+     <height>35</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bell MT</family>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0738636 rgba(139, 18, 18, 255), stop:0.488636 rgba(0, 0, 0, 255), stop:0.931818 rgba(139, 23, 23, 255));</string>
+   </property>
+   <property name="text">
+    <string>Rankings</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="shopButton">
+   <property name="geometry">
+    <rect>
+     <x>224</x>
+     <y>483</y>
+     <width>140</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>140</width>
+     <height>35</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>130</width>
+     <height>35</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bell MT</family>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0738636 rgba(139, 18, 18, 255), stop:0.488636 rgba(0, 0, 0, 255), stop:0.931818 rgba(139, 23, 23, 255));</string>
+   </property>
+   <property name="text">
+    <string>Shop</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="menuButton">
+   <property name="geometry">
+    <rect>
+     <x>37</x>
+     <y>483</y>
+     <width>140</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>140</width>
+     <height>35</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>130</width>
+     <height>35</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bell MT</family>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0738636 rgba(139, 18, 18, 255), stop:0.488636 rgba(0, 0, 0, 255), stop:0.931818 rgba(139, 23, 23, 255));</string>
+   </property>
+   <property name="text">
+    <string>Menu</string>
+   </property>
   </widget>
  </widget>
  <resources/>
