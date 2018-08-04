@@ -19,6 +19,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->googleButton->setGeometry(130, 390, 140, 35);
     ui->exitButton->setGeometry(130, 450, 140, 35);
 
+    ui->label->setText("<font color=#ffffff>ENCYCLO</font>");
+    ui->label->setAlignment(Qt::AlignHCenter);
+
 
     QList<QPushButton*> buttonsList;
     buttonsList << ui->playButton << ui->optionButton << ui->helpButton
