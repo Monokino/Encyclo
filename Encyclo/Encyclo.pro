@@ -34,3 +34,6 @@ HEADERS += \
 
 FORMS += \
     stackedwidget.ui
+
+RESOURCES += \
+    resources.qrc

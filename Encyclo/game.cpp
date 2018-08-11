@@ -1,12 +1,15 @@
+#include <QStackedWidget>
+
 #include "game.h"
 
 Game::Game(QWidget* parent) : QMainWindow(parent)
 {
-    widget_ = new StackedWidget(this);
-    this->setCentralWidget(widget_);
+    pagesWidget_ = new StackedWidget;
+    this->setCentralWidget(pagesWidget_);
+    this->setFixedSize(400, 600);
 }
 
 Game::~Game()
 {
-    delete widget_;
+    delete pagesWidget_;
 }

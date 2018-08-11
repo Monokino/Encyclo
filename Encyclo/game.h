@@ -16,7 +16,7 @@ public:
 
 private:
 
-    StackedWidget* widget_;
+    StackedWidget* pagesWidget_;
 };
 
 #endif // GAME_H
