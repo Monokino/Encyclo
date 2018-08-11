@@ -1,4 +1,4 @@
-#include "stackedwidget.h"
+#include "StackedWidget.h"
 
 StackedWidget::StackedWidget(QWidget* parent) : QStackedWidget(parent), ui(new Ui::game)
 {

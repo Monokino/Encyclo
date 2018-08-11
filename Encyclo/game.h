@@ -2,8 +2,7 @@
 #define GAME_H
 
 #include <QMainWindow>
-
-#include "stackedwidget.h"
+#include <QStackedWidget>
 
 class Game : public QMainWindow
 {
@@ -16,7 +15,11 @@ public:
 
 private:
 
-    StackedWidget* pagesWidget_;
+    QStackedWidget* pagesWidget_;
+
+private slots:
+
+    void SetCurrentPage(int n);
 };
 
 #endif // GAME_H
