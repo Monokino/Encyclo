@@ -1,12 +1,16 @@
 #ifndef STACKEDWIDGET_H
 #define STACKEDWIDGET_H
 
-#include <QObject>
+#include <QStackedWidget>
 
 class StackedWidget : public QStackedWidget
 {
+    Q_OBJECT
+
 public:
-    StackedWidget();
+
+    explicit StackedWidget(QWidget* parent = nullptr);
+    ~StackedWidget();
 };
 
 #endif // STACKEDWIDGET_H

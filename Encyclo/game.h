@@ -3,13 +3,20 @@
 
 #include <QMainWindow>
 
+#include "stackedwidget.h"
+
 class Game : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    Game(QWidget *parent = 0);
+
+    explicit Game(QWidget* parent = nullptr);
     ~Game();
+
+private:
+
+    StackedWidget* widget_;
 };
 
 #endif // GAME_H
