@@ -31,3 +31,6 @@ SOURCES += \
 HEADERS += \
         game.h \
     stackedwidget.h
+
+FORMS += \
+    stackedwidget.ui
