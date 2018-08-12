@@ -11,7 +11,6 @@ Game::Game(QWidget* parent) : QMainWindow(parent)
     this->setFixedSize(400, 600);
 
     pagesWidget_->addWidget(new EncycloPage(pagesWidget_));
-    //pagesWidget_->addWidget(new NewGamePage(pagesWidget_));
 }
 
 Game::~Game()

@@ -1,8 +1,9 @@
 #include "EncycloPage.h"
+#include "NewGamePage.h"
 
-EncycloPage::EncycloPage(QStackedWidget* stackedWidget, QWidget* parent) : BaseWidget(parent)
+EncycloPage::EncycloPage(QStackedWidget* stackedWidget, QWidget* parent) : QWidget(parent)
 {
-    this->stackedWidget = stackedWidget;
+    pagesWidget_ = stackedWidget;
 
     playButton_ = new QPushButton("Play", this);
     playButton_->setGeometry(QRect(135, 210, 130, 35));
@@ -33,10 +34,13 @@ EncycloPage::EncycloPage(QStackedWidget* stackedWidget, QWidget* parent) : BaseW
                               "}");
     }
 
-    connect(playButton_, SIGNAL(clicked()), this, SLOT(createNewGamePage()));
+    connect(playButton_, SIGNAL(clicked(bool)), this, SLOT(createNewGamePage()));
 }
 
 void EncycloPage::createNewGamePage()
 {
+    NewGamePage* newGamePage = new NewGamePage(pagesWidget_);
 
+    pagesWidget_->addWidget(newGamePage);
+    pagesWidget_->setCurrentWidget(newGamePage);
 }

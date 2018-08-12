@@ -1,6 +1,9 @@
 #include "NewGamePage.h"
 
-NewGamePage::NewGamePage(QWidget* parent) : QWidget(parent)
+NewGamePage::NewGamePage(QStackedWidget* stackedWidget, QWidget* parent) : QWidget(parent)
 {
-    encycloLabel_ = new QPushButton("text2");
+    pagesWidget_ = stackedWidget;
+    encycloLabel_ = new QPushButton("text2", this);
+    encycloLabel_->setGeometry(0,0,100,300);
+    encycloLabel_->show();
 }

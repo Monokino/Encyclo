@@ -7,17 +7,13 @@
 
 #include "BaseWidget.h"
 
-class EncycloPage : public BaseWidget
+class EncycloPage : public QWidget
 {
     Q_OBJECT
 
 public:
 
     explicit EncycloPage(QStackedWidget* stackedWidget, QWidget* parent = nullptr);
-
-public slots:
-
-    void createNewGamePage();
 
 private:
 
@@ -26,6 +22,12 @@ private:
     QPushButton* helpButton_;
     QPushButton* googleButton_;
     QPushButton* exitButton_;
+
+    QStackedWidget* pagesWidget_;
+
+private slots:
+
+    void createNewGamePage();
 };
 
 #endif // ENCYCLOPAGE_H

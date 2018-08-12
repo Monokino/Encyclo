@@ -5,16 +5,20 @@
 #include <QLabel>
 #include <QPushButton>
 
+#include "BaseWidget.h"
+
 class NewGamePage : public QWidget
 {
 
 public:
 
-    explicit NewGamePage(QWidget* parent = nullptr);
+    explicit NewGamePage(QStackedWidget* stackedWidget, QWidget* parent = nullptr);
 
 private:
 
     QPushButton* encycloLabel_;
+
+    QStackedWidget* pagesWidget_;
 };
 
 #endif // NEWGAME_H
