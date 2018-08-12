@@ -4,8 +4,7 @@
 #include <QWidget>
 #include <QLabel>
 #include <QPushButton>
-
-#include "BaseWidget.h"
+#include <QStackedWidget>
 
 class NewGamePage : public QWidget
 {

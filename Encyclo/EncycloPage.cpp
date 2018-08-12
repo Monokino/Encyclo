@@ -40,7 +40,6 @@ EncycloPage::EncycloPage(QStackedWidget* stackedWidget, QWidget* parent) : QWidg
 void EncycloPage::createNewGamePage()
 {
     NewGamePage* newGamePage = new NewGamePage(pagesWidget_);
-
     pagesWidget_->addWidget(newGamePage);
     pagesWidget_->setCurrentWidget(newGamePage);
 }

@@ -1,8 +1,5 @@
-#include <QStackedWidget>
-
 #include "game.h"
 #include "EncycloPage.h"
-#include "NewGamePage.h"
 
 Game::Game(QWidget* parent) : QMainWindow(parent)
 {

@@ -27,17 +27,13 @@ SOURCES += \
         main.cpp \
         game.cpp \
     EncycloPage.cpp \
-    NewGamePage.cpp \
-    BaseWidget.cpp
+    NewGamePage.cpp
 
 HEADERS += \
         game.h \
     EncycloPage.h \
-    NewGamePage.h \
-    BaseWidget.h
+    NewGamePage.h
 
-FORMS += \
-    stackedwidget.ui
+FORMS +=
 
-RESOURCES += \
-    resources.qrc
+RESOURCES +=

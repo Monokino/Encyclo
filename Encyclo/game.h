@@ -6,14 +6,12 @@
 
 class Game : public QMainWindow
 {
-    Q_OBJECT
-
 public:
 
     explicit Game(QWidget* parent = nullptr);
     ~Game();
 
-public:
+private:
 
     QStackedWidget* pagesWidget_;
 };
