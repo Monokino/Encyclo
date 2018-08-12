@@ -1,4 +1,5 @@
 #include "NewGameWidget.h"
+#include "Helper.h"
 
 NewGameWidget::NewGameWidget(QStackedWidget* stackedWidget, QWidget* parent) : QWidget(parent)
 {
@@ -12,5 +13,5 @@ NewGameWidget::NewGameWidget(QStackedWidget* stackedWidget, QWidget* parent) : Q
 
 void NewGameWidget::goEncycloWidget()
 {
-    pagesWidget_->setCurrentIndex(0);
+    pagesWidget_->setCurrentIndex(static_cast<ushort>(WidgetType::EncycloWidget));
 }

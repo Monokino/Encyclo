@@ -32,7 +32,8 @@ SOURCES += \
 HEADERS += \
     EncycloWidget.h \
     Game.h \
-    NewGameWidget.h
+    NewGameWidget.h \
+    Helper.h
 
 FORMS +=
 
