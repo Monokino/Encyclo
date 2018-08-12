@@ -26,15 +26,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         game.cpp \
-    StackedWidget.cpp \
     EncycloPage.cpp \
-    NewGamePage.cpp
+    NewGamePage.cpp \
+    BaseWidget.cpp
 
 HEADERS += \
         game.h \
-    StackedWidget.h \
     EncycloPage.h \
-    NewGamePage.h
+    NewGamePage.h \
+    BaseWidget.h
 
 FORMS += \
     stackedwidget.ui

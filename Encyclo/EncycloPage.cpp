@@ -1,7 +1,9 @@
 #include "EncycloPage.h"
 
-EncycloPage::EncycloPage(QWidget* parent) : QWidget(parent)
+EncycloPage::EncycloPage(QStackedWidget* stackedWidget, QWidget* parent) : BaseWidget(parent)
 {
+    this->stackedWidget = stackedWidget;
+
     playButton_ = new QPushButton("Play", this);
     playButton_->setGeometry(QRect(135, 210, 130, 35));
 
@@ -30,4 +32,11 @@ EncycloPage::EncycloPage(QWidget* parent) : QWidget(parent)
                               "background-color: #FFFFFF;"
                               "}");
     }
+
+    connect(playButton_, SIGNAL(clicked()), this, SLOT(createNewGamePage()));
+}
+
+void EncycloPage::createNewGamePage()
+{
+
 }

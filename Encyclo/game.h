@@ -13,13 +13,9 @@ public:
     explicit Game(QWidget* parent = nullptr);
     ~Game();
 
-private:
+public:
 
     QStackedWidget* pagesWidget_;
-
-private slots:
-
-    void SetCurrentPage(int n);
 };
 
 #endif // GAME_H

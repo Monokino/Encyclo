@@ -4,14 +4,20 @@
 #include <QWidget>
 #include <QLabel>
 #include <QPushButton>
-#include <QStackedWidget>
 
-class EncycloPage : public QWidget
+#include "BaseWidget.h"
+
+class EncycloPage : public BaseWidget
 {
+    Q_OBJECT
 
 public:
 
-    explicit EncycloPage(QWidget* parent = nullptr);
+    explicit EncycloPage(QStackedWidget* stackedWidget, QWidget* parent = nullptr);
+
+public slots:
+
+    void createNewGamePage();
 
 private:
 
