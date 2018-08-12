@@ -25,14 +25,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        game.cpp \
-    EncycloPage.cpp \
-    NewGamePage.cpp
+    EncycloWidget.cpp \
+    Game.cpp \
+    NewGameWidget.cpp
 
 HEADERS += \
-        game.h \
-    EncycloPage.h \
-    NewGamePage.h
+    EncycloWidget.h \
+    Game.h \
+    NewGameWidget.h
 
 FORMS +=
 

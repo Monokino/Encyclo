@@ -6,13 +6,13 @@
 #include <QPushButton>
 #include <QStackedWidget>
 
-class EncycloPage : public QWidget
+class EncycloWidget : public QWidget
 {
     Q_OBJECT
 
 public:
 
-    explicit EncycloPage(QStackedWidget* stackedWidget, QWidget* parent = nullptr);
+    explicit EncycloWidget(QStackedWidget* stackedWidget, QWidget* parent = nullptr);
 
 private:
 
@@ -26,7 +26,7 @@ private:
 
 private slots:
 
-    void createNewGamePage();
+    void goNewGameWidget();
 };
 
 #endif // ENCYCLOPAGE_H
