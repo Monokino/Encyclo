@@ -2,6 +2,8 @@
 #include "EncycloWidget.h"
 #include "NewGameWidget.h"
 #include "Helper.h"
+#include "loginuserwidget.h"
+#include "AccountSettingsWidget.h"
 
 Game::Game(QWidget* parent) : QMainWindow(parent)
 {
@@ -11,8 +13,10 @@ Game::Game(QWidget* parent) : QMainWindow(parent)
 
     pagesWidget_->addWidget(new EncycloWidget(pagesWidget_));
     pagesWidget_->addWidget(new NewGameWidget(pagesWidget_));
+    pagesWidget_->addWidget(new LoginUserWidget(pagesWidget_));
+    pagesWidget_->addWidget(new AccountSettingsWidget(pagesWidget_));
 
-    pagesWidget_->setCurrentIndex(static_cast<ushort>(WidgetType::EncycloWidget));
+    pagesWidget_->setCurrentIndex(static_cast<ushort>(WidgetType::LoginUserWidget));
 }
 
 Game::~Game()

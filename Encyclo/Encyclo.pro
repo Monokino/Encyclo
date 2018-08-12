@@ -27,13 +27,17 @@ SOURCES += \
         main.cpp \
     EncycloWidget.cpp \
     Game.cpp \
-    NewGameWidget.cpp
+    NewGameWidget.cpp \
+    loginuserwidget.cpp \
+    AccountSettingsWidget.cpp
 
 HEADERS += \
     EncycloWidget.h \
     Game.h \
     NewGameWidget.h \
-    Helper.h
+    Helper.h \
+    loginuserwidget.h \
+    AccountSettingsWidget.h
 
 FORMS +=
 

@@ -4,7 +4,9 @@
 enum class WidgetType
 {
     EncycloWidget = 0,
-    NewGameWidget = 1
+    NewGameWidget = 1,
+    LoginUserWidget,
+    AccountSettingsWidget
 };
 
 #endif // HELPER_H
