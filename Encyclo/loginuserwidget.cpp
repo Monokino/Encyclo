@@ -12,6 +12,7 @@ LoginUserWidget::LoginUserWidget(QStackedWidget* stackedWidget, QWidget* parent)
     existingUserButton_->setGeometry(QRect(135, 270, 130, 35));
 
     connect(newUserButton_, SIGNAL(clicked(bool)), this, SLOT(goAccountSettingsWidget()));
+
 }
 
 void LoginUserWidget::goAccountSettingsWidget()
