@@ -2,9 +2,10 @@
 #define ENCYCLOPAGE_H
 
 #include <QWidget>
-#include <QLabel>
-#include <QPushButton>
-#include <QStackedWidget>
+
+class QLabel;
+class QPushButton;
+class QStackedWidget;
 
 class EncycloWidget : public QWidget
 {

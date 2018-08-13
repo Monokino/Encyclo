@@ -2,7 +2,8 @@
 #define GAME_H
 
 #include <QMainWindow>
-#include <QStackedWidget>
+
+class QStackedWidget;
 
 class Game : public QMainWindow
 {

@@ -2,10 +2,11 @@
 #define ACCOUNTSETTINGSWIDGET_H
 
 #include <QWidget>
-#include <QLabel>
-#include <QLineEdit>
-#include <QComboBox>
-#include <QStackedWidget>
+
+class QLabel;
+class QLineEdit;
+class QComboBox;
+class QStackedWidget;
 
 class AccountSettingsWidget : public QWidget
 {

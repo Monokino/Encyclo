@@ -1,3 +1,6 @@
+#include <QStackedWidget>
+#include <QPushButton>
+
 #include "loginuserwidget.h"
 #include "Helper.h"
 

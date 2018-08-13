@@ -1,3 +1,7 @@
+#include <QLabel>
+#include <QPushButton>
+#include <QStackedWidget>
+
 #include "NewGameWidget.h"
 #include "Helper.h"
 

@@ -1,3 +1,5 @@
+#include <QStackedWidget>
+
 #include "Game.h"
 #include "EncycloWidget.h"
 #include "NewGameWidget.h"

@@ -1,6 +1,11 @@
 #include "AccountSettingsWidget.h"
 #include "Helper.h"
 
+#include <QLabel>
+#include <QLineEdit>
+#include <QComboBox>
+#include <QStackedWidget>
+
 AccountSettingsWidget::AccountSettingsWidget(QStackedWidget* stackedWidget, QWidget* parent) : QWidget(parent)
 {
     pagesWidget_ = stackedWidget;

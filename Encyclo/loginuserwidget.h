@@ -2,8 +2,9 @@
 #define LOGINUSERWIDGET_H
 
 #include <QWidget>
-#include <QStackedWidget>
-#include <QPushButton>
+
+class QStackedWidget;
+class QPushButton;
 
 class LoginUserWidget : public QWidget
 {
