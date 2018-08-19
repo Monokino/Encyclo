@@ -7,6 +7,8 @@ class QLabel;
 class QLineEdit;
 class QComboBox;
 class QStackedWidget;
+class QCheckBox;
+class QPushButton;
 
 class AccountSettingsWidget : public QWidget
 {
@@ -18,14 +20,30 @@ public:
 
 private:
 
+    QLabel* emailLabel_;
     QLabel* usernameLabel_;
     QLabel* countryLabel_;
     QLabel* passwordLabel_;
+    QLabel* repasswordLabel_;
+
+    QLineEdit* emailEdit_;
     QLineEdit* usernameEdit_;
-    QLineEdit* passwordEdit_;
     QComboBox* countryCombobox_;
+    QLineEdit* passwordEdit_;
+    QLineEdit* repasswordEdit_;
+
+    QCheckBox* agreeCheckBox_;
+    QLabel* agreeLabel_;
+
+    QPushButton* backButton_;
+    QPushButton* confirmButton_;
 
     QStackedWidget* pagesWidget_;
+
+private slots:
+
+    void goLoginUserWidget();
+    void goEncycloWidget();
 };
 
 #endif // ACCOUNTSETTINGSWIDGET_H

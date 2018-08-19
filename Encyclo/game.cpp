@@ -4,7 +4,7 @@
 #include "EncycloWidget.h"
 #include "NewGameWidget.h"
 #include "Helper.h"
-#include "loginuserwidget.h"
+#include "LoginUserWidget.h"
 #include "AccountSettingsWidget.h"
 
 Game::Game(QWidget* parent) : QMainWindow(parent)

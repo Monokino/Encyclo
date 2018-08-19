@@ -1,7 +1,7 @@
 #include <QStackedWidget>
 #include <QPushButton>
 
-#include "loginuserwidget.h"
+#include "LoginUserWidget.h"
 #include "Helper.h"
 
 LoginUserWidget::LoginUserWidget(QStackedWidget* stackedWidget, QWidget* parent) : QWidget(parent)
