@@ -18,7 +18,21 @@ public:
 
 private:
 
+    QLabel* usernameLabel_;
+    QLabel* passwordLabel_;
+
+    QLineEdit* usernameEdit_;
+    QLineEdit* passwordEdit_;
+
+    QPushButton* backButton_;
+    QPushButton* confirmButton_;
+
     QStackedWidget* pagesWidget_;
+
+private slots:
+
+    void goLoginUserWidget();
+    void goEncycloWidget();
 
 };
 

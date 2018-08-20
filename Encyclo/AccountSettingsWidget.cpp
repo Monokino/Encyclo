@@ -16,35 +16,35 @@ AccountSettingsWidget::AccountSettingsWidget(QStackedWidget* stackedWidget, QWid
     emailLabel_->setGeometry(QRect(60, 150, 130, 35));
 
     usernameLabel_ = new QLabel("Username", this);
-    usernameLabel_->setGeometry(QRect(60, 210, 130, 35));
+    usernameLabel_->setGeometry(QRect(60, 208, 130, 35));
 
     countryLabel_ = new QLabel("Country", this);
-    countryLabel_->setGeometry(QRect(60, 270, 130, 35));
+    countryLabel_->setGeometry(QRect(60, 266, 130, 35));
 
     passwordLabel_ = new QLabel("Password", this);
-    passwordLabel_->setGeometry(QRect(60, 330, 130, 35));
+    passwordLabel_->setGeometry(QRect(60, 324, 130, 35));
 
     repasswordLabel_ = new QLabel("Repeat password", this);
-    repasswordLabel_->setGeometry(QRect(60, 390, 130, 35));
+    repasswordLabel_->setGeometry(QRect(60, 382, 130, 35));
 
     emailEdit_ = new QLineEdit(this);
-    emailEdit_->setGeometry(QRect(210, 150, 130, 35));
+    emailEdit_->setGeometry(QRect(210, 150, 130, 30));
 
     usernameEdit_ = new QLineEdit(this);
-    usernameEdit_->setGeometry(QRect(210, 210, 130, 35));
+    usernameEdit_->setGeometry(QRect(210, 208, 130, 30));
 
     countryCombobox_ = new QComboBox(this);
-    countryCombobox_->setGeometry(QRect(210, 270, 130, 35));
+    countryCombobox_->setGeometry(QRect(210, 266, 130, 30));
 
     QStringList countryList;
     countryList << "Ukraine" << "USA" << "Great Britain";
     countryCombobox_->addItems(countryList);
 
     passwordEdit_ = new QLineEdit(this);
-    passwordEdit_->setGeometry(QRect(210, 330, 130, 35));
+    passwordEdit_->setGeometry(QRect(210, 324, 130, 30));
 
     repasswordEdit_ = new QLineEdit(this);
-    repasswordEdit_->setGeometry(QRect(210, 390, 130, 35));
+    repasswordEdit_->setGeometry(QRect(210, 382, 130, 30));
 
     agreeCheckBox_ = new QCheckBox(this);
     agreeCheckBox_->setGeometry(QRect(60, 420, 15, 15));

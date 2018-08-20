@@ -28,6 +28,7 @@ private:
 private slots:
 
     void goNewGameWidget();
+    void goLoginUserWidget();
 };
 
 #endif // ENCYCLOPAGE_H
