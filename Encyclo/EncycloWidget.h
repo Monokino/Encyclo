@@ -23,6 +23,8 @@ private:
     QPushButton* googleButton_;
     QPushButton* exitButton_;
 
+    QLabel* encycloLabel_;
+
     QStackedWidget* pagesWidget_;
 
 private slots:

@@ -10,6 +10,15 @@ EncycloWidget::EncycloWidget(QStackedWidget* stackedWidget, QWidget* parent) : Q
 {
     pagesWidget_ = stackedWidget;
 
+    encycloLabel_ = new QLabel("Encyclo", this);
+    encycloLabel_->setGeometry(QRect(75, 90, 250, 85));
+    encycloLabel_->setStyleSheet("QLabel {color: #000000;"
+                                 "font-family: Bell MT;"
+                                 "font-size: 70px;"
+                                 "font-weight: bold;"
+                                 "}");
+
+
     playButton_ = new QPushButton("Play", this);
     playButton_->setGeometry(QRect(135, 210, 130, 35));
 

@@ -5,6 +5,7 @@
 
 class QStackedWidget;
 class QPushButton;
+class QLabel;
 
 class LoginUserWidget : public QWidget
 {
@@ -19,6 +20,8 @@ private:
     QPushButton* existingUserButton_;
     QPushButton* exitButton_;
 
+    QLabel* encycloLabel_;
+
 
     QStackedWidget* pagesWidget_;
 
@@ -26,6 +29,7 @@ private slots:
 
     void goAccountSettingsWidget();
     void goExistingUserWidget();
+    void exitButtonClicked();
 };
 
 #endif // LOGINUSERWIDGET_H

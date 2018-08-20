@@ -18,7 +18,14 @@ public:
 
 private:
 
-    QPushButton* menuButton_;
+    QPushButton* newGameButton_;
+    QPushButton* eclopediaButton_;
+    QPushButton* backButton_;
+    QPushButton* questsButton_;
+    QPushButton* achievButton_;
+    QPushButton* rankButton_;
+    QPushButton* shopButton_;
+
 
     QStackedWidget* pagesWidget_;
 
