@@ -29,7 +29,8 @@ SOURCES += \
     Game.cpp \
     NewGameWidget.cpp \
     AccountSettingsWidget.cpp \
-    LoginUserWidget.cpp
+    LoginUserWidget.cpp \
+    ExistingUserWidget.cpp
 
 HEADERS += \
     EncycloWidget.h \
@@ -37,7 +38,8 @@ HEADERS += \
     NewGameWidget.h \
     Helper.h \
     AccountSettingsWidget.h \
-    LoginUserWidget.h
+    LoginUserWidget.h \
+    ExistingUserWidget.h
 
 FORMS +=
 
