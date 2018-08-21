@@ -20,7 +20,6 @@ private:
     QPushButton* playButton_;
     QPushButton* optionsButton_;
     QPushButton* helpButton_;
-    QPushButton* googleButton_;
     QPushButton* exitButton_;
 
     QLabel* encycloLabel_;

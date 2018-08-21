@@ -13,43 +13,42 @@ AccountSettingsWidget::AccountSettingsWidget(QStackedWidget* stackedWidget, QWid
     pagesWidget_ = stackedWidget;
 
     emailLabel_ = new QLabel("Email", this);
-    emailLabel_->setGeometry(QRect(60, 150, 130, 35));
+    emailLabel_->setGeometry(QRect(60, 130, 130, 35));
+    emailEdit_ = new QLineEdit(this);
+    emailEdit_->setGeometry(QRect(210, 135, 130, 25));
 
     usernameLabel_ = new QLabel("Username", this);
-    usernameLabel_->setGeometry(QRect(60, 208, 130, 35));
+    usernameLabel_->setGeometry(QRect(60, 188, 130, 35));
+    usernameEdit_ = new QLineEdit(this);
+    usernameEdit_->setGeometry(QRect(210, 193, 130, 25));
 
     countryLabel_ = new QLabel("Country", this);
-    countryLabel_->setGeometry(QRect(60, 266, 130, 35));
+    countryLabel_->setGeometry(QRect(60, 246, 130, 35));
+    countryCombobox_ = new QComboBox(this);
+    countryCombobox_->setGeometry(QRect(210, 251, 130, 25));
 
     passwordLabel_ = new QLabel("Password", this);
-    passwordLabel_->setGeometry(QRect(60, 324, 130, 35));
+    passwordLabel_->setGeometry(QRect(60, 304, 130, 35));
+    passwordEdit_ = new QLineEdit(this);
+    passwordEdit_->setGeometry(QRect(210, 309, 130, 25));
 
     repasswordLabel_ = new QLabel("Repeat password", this);
-    repasswordLabel_->setGeometry(QRect(60, 382, 130, 35));
+    repasswordLabel_->setGeometry(QRect(60, 362, 130, 35));
+    repasswordEdit_ = new QLineEdit(this);
+    repasswordEdit_->setGeometry(QRect(210, 367, 130, 25));
 
-    emailEdit_ = new QLineEdit(this);
-    emailEdit_->setGeometry(QRect(210, 150, 130, 30));
-
-    usernameEdit_ = new QLineEdit(this);
-    usernameEdit_->setGeometry(QRect(210, 208, 130, 30));
-
-    countryCombobox_ = new QComboBox(this);
-    countryCombobox_->setGeometry(QRect(210, 266, 130, 30));
 
     QStringList countryList;
     countryList << "Ukraine" << "USA" << "Great Britain";
     countryCombobox_->addItems(countryList);
 
-    passwordEdit_ = new QLineEdit(this);
-    passwordEdit_->setGeometry(QRect(210, 324, 130, 30));
-
-    repasswordEdit_ = new QLineEdit(this);
-    repasswordEdit_->setGeometry(QRect(210, 382, 130, 30));
 
     agreeCheckBox_ = new QCheckBox(this);
-    agreeCheckBox_->setGeometry(QRect(60, 420, 15, 15));
+    agreeCheckBox_->setGeometry(QRect(65, 410, 15, 15));
     agreeLabel_ = new QLabel("I agree with lisence agreements", this);
-    agreeLabel_->setGeometry(QRect(75, 410, 200, 35));
+    agreeLabel_->setGeometry(QRect(90, 400, 200, 35));
+    agreeLabel_->setStyleSheet("QLabel {font-size: 18px}");
+
 
     backButton_ = new QPushButton("Back", this);
     backButton_->setGeometry(60, 450, 130, 35);

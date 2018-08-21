@@ -13,6 +13,7 @@ Game::Game(QWidget* parent) : QMainWindow(parent)
     this->pagesWidget_ = new QStackedWidget;
     this->setCentralWidget(pagesWidget_);
     this->setFixedSize(400, 600);
+    this->setStyleSheet("QStackedWidget {background-image: url(:/source/back.png)}" );
 
     pagesWidget_->addWidget(new EncycloWidget(pagesWidget_));
     pagesWidget_->addWidget(new NewGameWidget(pagesWidget_));

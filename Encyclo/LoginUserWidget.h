@@ -18,10 +18,10 @@ private:
 
     QPushButton* newUserButton_;
     QPushButton* existingUserButton_;
+    QPushButton* googleButton_;
     QPushButton* exitButton_;
 
     QLabel* encycloLabel_;
-
 
     QStackedWidget* pagesWidget_;
 

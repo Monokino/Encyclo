@@ -10,13 +10,13 @@ NewGameWidget::NewGameWidget(QStackedWidget* stackedWidget, QWidget* parent) : Q
     pagesWidget_ = stackedWidget;
 
     newGameButton_ = new QPushButton("New Game", this);
-    newGameButton_->setGeometry(QRect(135, 330, 130, 35));
+    newGameButton_->setGeometry(QRect(135, 310, 130, 35));
 
     eclopediaButton_ = new QPushButton("Encyclopedia", this);
-    eclopediaButton_->setGeometry(60, 380, 130, 35);
+    eclopediaButton_->setGeometry(60, 370, 130, 35);
 
     questsButton_ = new QPushButton("Quests", this);
-    questsButton_->setGeometry(210, 380, 130, 35);
+    questsButton_->setGeometry(210, 370, 130, 35);
 
     achievButton_ = new QPushButton("Achievements", this);
     achievButton_->setGeometry(60, 430, 130, 35);
@@ -25,10 +25,10 @@ NewGameWidget::NewGameWidget(QStackedWidget* stackedWidget, QWidget* parent) : Q
     rankButton_->setGeometry(210, 430, 130, 35);
 
     backButton_ = new QPushButton("Back", this);
-    backButton_->setGeometry(60, 480, 130, 35);
+    backButton_->setGeometry(60, 490, 130, 35);
 
     shopButton_ = new QPushButton("Shop", this);
-    shopButton_->setGeometry(210, 480, 130, 35);
+    shopButton_->setGeometry(210, 490, 130, 35);
 
 
     connect(backButton_, SIGNAL(clicked(bool)), this, SLOT(goEncycloWidget()));

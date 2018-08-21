@@ -12,9 +12,9 @@ LoginUserWidget::LoginUserWidget(QStackedWidget* stackedWidget, QWidget* parent)
 
     encycloLabel_ = new QLabel("Encyclo", this);
     encycloLabel_->setGeometry(QRect(75, 90, 250, 85));
-    encycloLabel_->setStyleSheet("QLabel {color: #000000;"
-                                 "font-family: Bell MT;"
-                                 "font-size: 70px;"
+    encycloLabel_->setStyleSheet("QLabel {color: #FFFFFF;"
+                                 "font-family: Gabriola;"
+                                 "font-size: 105px;"
                                  "font-weight: bold;"
                                  "}");
 
@@ -24,8 +24,11 @@ LoginUserWidget::LoginUserWidget(QStackedWidget* stackedWidget, QWidget* parent)
     existingUserButton_ = new QPushButton("Existing User", this);
     existingUserButton_->setGeometry(QRect(135, 270, 130, 35));
 
+    googleButton_ = new QPushButton("Google+", this);
+    googleButton_->setGeometry(QRect(135, 330, 130, 35));
+
     exitButton_ = new QPushButton("Exit", this);
-    exitButton_->setGeometry(QRect(135, 330, 130, 35));
+    exitButton_->setGeometry(QRect(135, 390, 130, 35));
 
     connect(newUserButton_, SIGNAL(clicked(bool)), this, SLOT(goAccountSettingsWidget()));
     connect(existingUserButton_, SIGNAL(clicked(bool)), this, SLOT(goExistingUserWidget()));

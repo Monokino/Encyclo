@@ -43,4 +43,5 @@ HEADERS += \
 
 FORMS +=
 
-RESOURCES +=
+RESOURCES += \
+    source.qrc
