@@ -1,4 +1,5 @@
 #include "AccountSettingsWidget.h"
+#include "Players.h"
 #include "Helper.h"
 
 #include <QLabel>
@@ -8,6 +9,7 @@
 #include <QCheckBox>
 #include <QPushButton>
 #include <QMessageBox>
+#include <iostream>
 
 AccountSettingsWidget::AccountSettingsWidget(QStackedWidget* stackedWidget, QWidget* parent) : QWidget(parent)
 {
@@ -61,7 +63,6 @@ AccountSettingsWidget::AccountSettingsWidget(QStackedWidget* stackedWidget, QWid
 
     connect(backButton_, SIGNAL(clicked(bool)), this, SLOT(goLoginUserWidget()));
     connect(confirmButton_, SIGNAL(clicked(bool)), this, SLOT(goEncycloWidget()));
-
 }
 
 void AccountSettingsWidget::Clear()
@@ -86,8 +87,23 @@ void AccountSettingsWidget::goEncycloWidget()
     result &= passwordEdit_->text() == repasswordEdit_->text();
     result &= agreeCheckBox_->isChecked();
 
+    for(int i = 0; i < Players::userList.size(); i++)
+    {
+        if (Players::userList[i].email_ == emailEdit_->text()
+                || Players::userList[i].login_ == usernameEdit_->text())
+        {
+            result = false;
+            break;
+        }
+    }
+
     if(result)
     {
+        Players newPlayer(emailEdit_->text(), usernameEdit_->text(),passwordEdit_->text(),
+                          countryCombobox_->currentText());
+
+        Players::userList.append(newPlayer);
+
         Clear();
         pagesWidget_->setCurrentIndex(static_cast<ushort>(WidgetType::EncycloWidget));
     }
