@@ -40,6 +40,8 @@ private:
 
     QStackedWidget* pagesWidget_;
 
+    void Clear();
+
 private slots:
 
     void goLoginUserWidget();

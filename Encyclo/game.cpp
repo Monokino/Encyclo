@@ -8,6 +8,13 @@
 #include "AccountSettingsWidget.h"
 #include <ExistingUserWidget.h>
 
+//User user1;// = ("adam@i.ua", "Adam", "123", "Ukraine");
+//User user2;// = ("eva@gb.net", "Eva", "456", "Great Britain");
+//User user3;// = ("enot@usa.com", "Enot", "789", "USA");
+
+//class QList<User>;
+//QList <User> userList;// = {user1, user2, user3};
+
 Game::Game(QWidget* parent) : QMainWindow(parent)
 {
     this->pagesWidget_ = new QStackedWidget;
@@ -28,3 +35,4 @@ Game::~Game()
 {
     delete pagesWidget_;
 }
+
