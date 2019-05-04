@@ -4,6 +4,7 @@
 #include <QSqlQuery>
 #include <iostream>
 #include <QCoreApplication>
+#include <QSqlError>
 
 #include "DBManager.h"
 
@@ -13,7 +14,25 @@ DBManager::DBManager()
     dbPath_ = appPath_ + "/" + dbName_;
     scriptPath_ = appPath_ + "/" + scriptName_;
 
+    if(!QSqlDatabase::isDriverAvailable("QSQLITE"))
+    {
+        std::cout << "sqlite driver not available" << std::endl;
+        dbCreateResult_ = false;
+        return;
+    }
+
+    db_ = QSqlDatabase::addDatabase("QSQLITE");
+    db_.setDatabaseName(dbPath_);
+
     Init();
+}
+
+DBManager::~DBManager()
+{
+    if(db_.isOpen())
+    {
+        db_.close();
+    }
 }
 
 bool DBManager::GetDBCreateResult() const
@@ -42,7 +61,19 @@ void DBManager::Init()
     }
     else
     {
-        // db file not found, create new db file
+        // db file not found, open db connection and create new db file
+        if(!db_.open())
+        {
+            std::cout << "database file cannot be opened" << std::endl;
+            return;
+        }
+
+        if(!db_.isOpen())
+        {
+            std::cout << "database is not opened" << std::endl;
+            return;
+        }
+
         Create();
     }
 }
@@ -60,6 +91,7 @@ void DBManager::Create()
     {
         if(!RunScript())
         {
+            db_.commit();
             ShowCannotRunScriptMessageBox();
         }
     }
@@ -113,10 +145,18 @@ bool DBManager::RunScript()
             continue;
         }
 
-        QSqlQuery query;
-        if(!query.exec(script))
+        QSqlQuery query(db_);
+        bool res = query.exec(script);
+
+        std::cout << "Query: " <<
+                     query.lastQuery().toStdString() << std::endl;
+
+        if(!res)
         {
-            std::cout << "Script problem on execute" << std::endl;
+            std::cout << "Script problem on execute " <<
+                         query.lastQuery().toStdString() << std::endl;
+            std::cout << "Script problem on execute " <<
+                         query.lastError().text().toStdString() << std::endl;
             return false;
         }
     }

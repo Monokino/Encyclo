@@ -2,6 +2,7 @@
 #define DBMANAGER_H
 
 #include <QString>
+#include <QSqlDatabase>
 
 class DBManager
 {
@@ -9,6 +10,7 @@ class DBManager
 public:
 
     DBManager();
+    ~DBManager();
     bool GetDBCreateResult() const;
 
 private:
@@ -24,6 +26,7 @@ private:
     QString dbPath_;
     QString scriptPath_;
     QString appPath_;
+    QSqlDatabase db_;
 
     bool dbCreateResult_ = true;
 };

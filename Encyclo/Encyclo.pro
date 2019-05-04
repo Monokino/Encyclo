@@ -52,5 +52,4 @@ FORMS +=
 RESOURCES += \
     source.qrc
 
-DISTFILES += \
-    script.sql
+DISTFILES +=
