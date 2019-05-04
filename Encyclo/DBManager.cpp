@@ -11,8 +11,13 @@
 DBManager::DBManager()
 {
     appPath_ = QCoreApplication::applicationDirPath();
+    std::cout << "app path is " << appPath_.toStdString() << std::endl;
+
     dbPath_ = appPath_ + "/" + dbName_;
+    std::cout << "db path is " << dbPath_.toStdString() << std::endl;
+
     scriptPath_ = appPath_ + "/" + scriptName_;
+    std::cout << "script path is " << scriptPath_.toStdString() << std::endl;
 
     if(!QSqlDatabase::isDriverAvailable("QSQLITE"))
     {
@@ -89,9 +94,12 @@ void DBManager::Create()
     }
     else
     {
-        if(!RunScript())
+        if(!ExecuteScript())
         {
             db_.commit();
+            db_.close();
+            QSqlDatabase::removeDatabase(db_.connectionName());
+
             ShowCannotRunScriptMessageBox();
         }
     }
@@ -125,7 +133,7 @@ void DBManager::ShowCannotRunScriptMessageBox()
     }
 }
 
-bool DBManager::RunScript()
+bool DBManager::ExecuteScript()
 {
     QFile scriptFile(scriptPath_);
     if(!scriptFile.open(QFile::ReadOnly | QFile::Text))
@@ -140,7 +148,7 @@ bool DBManager::RunScript()
 
     foreach(const auto& script, scripts)
     {
-        if(script.isEmpty())
+        if(script.trimmed().isEmpty())
         {
             continue;
         }

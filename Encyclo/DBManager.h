@@ -19,7 +19,7 @@ private:
     void Create();
     void ShowScriptNotFoundMessageBox();
     void ShowCannotRunScriptMessageBox();
-    bool RunScript();
+    bool ExecuteScript();
 
     const QString dbName_ = "encyclodb";
     const QString scriptName_ = "script.sql";
