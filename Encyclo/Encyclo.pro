@@ -4,9 +4,11 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
+CONFIG += console
 
 TARGET = Encyclo
 TEMPLATE = app
@@ -30,7 +32,8 @@ SOURCES += \
     NewGameWidget.cpp \
     AccountSettingsWidget.cpp \
     LoginUserWidget.cpp \
-    ExistingUserWidget.cpp
+    ExistingUserWidget.cpp \
+    DBManager.cpp
 
 HEADERS += \
     EncycloWidget.h \
@@ -39,7 +42,8 @@ HEADERS += \
     Helper.h \
     AccountSettingsWidget.h \
     LoginUserWidget.h \
-    ExistingUserWidget.h
+    ExistingUserWidget.h \
+    DBManager.h
 
 FORMS +=
 

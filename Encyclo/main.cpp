@@ -1,10 +1,20 @@
 #include <QApplication>
+#include <QStandardPaths>
+#include <iostream>
+#include <QString>
 
 #include "Game.h"
+#include "DBManager.h"
 
 int main(int argc, char* argv[])
 {
     QApplication app(argc, argv);
+
+    DBManager db;
+    if(!db.GetDBCreateResult())
+    {
+        return -1;
+    }
 
     Game game;
     game.show();
