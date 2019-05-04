@@ -33,7 +33,8 @@ SOURCES += \
     AccountSettingsWidget.cpp \
     LoginUserWidget.cpp \
     ExistingUserWidget.cpp \
-    DBManager.cpp
+    DBManager.cpp \
+    Players.cpp
 
 HEADERS += \
     EncycloWidget.h \
@@ -43,9 +44,13 @@ HEADERS += \
     AccountSettingsWidget.h \
     LoginUserWidget.h \
     ExistingUserWidget.h \
-    DBManager.h
+    DBManager.h \
+    Players.h
 
 FORMS +=
 
 RESOURCES += \
     source.qrc
+
+DISTFILES += \
+    script.sql
