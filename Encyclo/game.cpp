@@ -6,7 +6,7 @@
 #include "Helper.h"
 #include "LoginUserWidget.h"
 #include "AccountSettingsWidget.h"
-#include <ExistingUserWidget.h>
+#include "ExistingUserWidget.h"
 
 Game::Game(QWidget* parent) : QMainWindow(parent)
 {
@@ -28,3 +28,4 @@ Game::~Game()
 {
     delete pagesWidget_;
 }
+

@@ -1,4 +1,5 @@
 #include "AccountSettingsWidget.h"
+#include "Players.h"
 #include "Helper.h"
 
 #include <QLabel>
@@ -7,6 +8,8 @@
 #include <QStackedWidget>
 #include <QCheckBox>
 #include <QPushButton>
+#include <QMessageBox>
+#include <iostream>
 
 AccountSettingsWidget::AccountSettingsWidget(QStackedWidget* stackedWidget, QWidget* parent) : QWidget(parent)
 {
@@ -31,11 +34,13 @@ AccountSettingsWidget::AccountSettingsWidget(QStackedWidget* stackedWidget, QWid
     passwordLabel_->setGeometry(QRect(60, 304, 130, 35));
     passwordEdit_ = new QLineEdit(this);
     passwordEdit_->setGeometry(QRect(210, 309, 130, 25));
+    passwordEdit_->setEchoMode(QLineEdit::Password);
 
     repasswordLabel_ = new QLabel("Repeat password", this);
     repasswordLabel_->setGeometry(QRect(60, 362, 130, 35));
     repasswordEdit_ = new QLineEdit(this);
     repasswordEdit_->setGeometry(QRect(210, 367, 130, 25));
+    repasswordEdit_->setEchoMode(QLineEdit::Password);
 
 
     QStringList countryList;
@@ -58,15 +63,52 @@ AccountSettingsWidget::AccountSettingsWidget(QStackedWidget* stackedWidget, QWid
 
     connect(backButton_, SIGNAL(clicked(bool)), this, SLOT(goLoginUserWidget()));
     connect(confirmButton_, SIGNAL(clicked(bool)), this, SLOT(goEncycloWidget()));
+}
 
+void AccountSettingsWidget::Clear()
+{
+    emailEdit_->clear();
+    usernameEdit_->clear();
+    passwordEdit_->clear();
+    repasswordEdit_->clear();
+    agreeCheckBox_->setEnabled(false);
+    countryCombobox_->setCurrentIndex(0);
 }
 
 void AccountSettingsWidget::goLoginUserWidget()
 {
+    Clear();
     pagesWidget_->setCurrentIndex(static_cast<ushort>(WidgetType::LoginUserWidget));
 }
 
 void AccountSettingsWidget::goEncycloWidget()
 {
-    pagesWidget_->setCurrentIndex(static_cast<ushort>(WidgetType::EncycloWidget));
+    bool result = emailEdit_->text().contains('@');
+    result &= passwordEdit_->text() == repasswordEdit_->text();
+    result &= agreeCheckBox_->isChecked();
+
+    for(int i = 0; i < Players::userList.size(); i++)
+    {
+        if (Players::userList[i].email_ == emailEdit_->text()
+                || Players::userList[i].login_ == usernameEdit_->text())
+        {
+            result = false;
+            break;
+        }
+    }
+
+    if(result)
+    {
+        Players newPlayer(emailEdit_->text(), usernameEdit_->text(),passwordEdit_->text(),
+                          countryCombobox_->currentText());
+
+        Players::userList.append(newPlayer);
+
+        Clear();
+        pagesWidget_->setCurrentIndex(static_cast<ushort>(WidgetType::EncycloWidget));
+    }
+    else
+    {
+        QMessageBox::warning (this, "Login Error", "<font color=red>Incorrect data</font>", QMessageBox::Ok);
+    }
 }
